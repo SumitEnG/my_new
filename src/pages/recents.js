@@ -72,11 +72,7 @@ function Recents() {
         }}
       >
         <div>
-          {showTable ? (
-            <h1>No task schduled on {valueDate}</h1>
-          ) : (
-            <h1>{valueDate}'s tasks :</h1>
-          )}
+          {showTable ? <h1>No task schduled on {valueDate}</h1> : <></>}
         </div>
         <br />
 
