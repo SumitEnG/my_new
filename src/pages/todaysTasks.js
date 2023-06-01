@@ -63,6 +63,7 @@ function TodaysTasks() {
     let year = date.getFullYear();
 
     let currentDate = `${year}-${month}-${day}`;
+    console.log(currentDate, list);
 
     setLists(
       list.filter((li) => {
@@ -78,7 +79,7 @@ function TodaysTasks() {
       .get("https://my-app-backend3.onrender.com/api/list")
       .then((res) => {
         getTodaysList(res.data);
-        console.log(lists);
+        console.log(res.data);
       })
       .catch((err) => console.log(err));
   };
