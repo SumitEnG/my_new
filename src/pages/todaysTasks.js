@@ -19,6 +19,7 @@ import {
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "../index.css";
+import { useNavigate } from "react-router-dom";
 
 const style = {
   position: "absolute",
@@ -41,6 +42,7 @@ function TodaysTasks() {
   const [currentSelectedId, setCurrentSelectedId] = useState("");
 
   const [openModal, setOpenModal] = useState(false);
+  const navigate = useNavigate();
 
   const handleOpen = (id) => {
     setOpenModal(true);
@@ -93,6 +95,12 @@ function TodaysTasks() {
   }
 
   useEffect(() => {
+    if (localStorage.getItem("token")) {
+      console.log(localStorage.getItem("token"));
+    } else {
+      navigate("/");
+    }
+
     getLists();
   }, []);
 
