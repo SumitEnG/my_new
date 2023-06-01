@@ -68,7 +68,7 @@ function TodaysTasks() {
     setLists(
       list.filter((li) => {
         console.log(li.split("T") == currentDate);
-        return li.split("T") == currentDate;
+        return li.date.split("T") == currentDate;
       })
     );
   }
