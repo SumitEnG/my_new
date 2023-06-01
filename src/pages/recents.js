@@ -14,15 +14,18 @@ import {
   TextField,
 } from "@mui/material";
 import { SendOutlined } from "@mui/icons-material";
+import axios from "axios";
 
 function Recents() {
   const [lists, setLists] = useState([]);
   const [valueDate, setValueDate] = useState("");
+  const navigate = useNavigate();
+  const count = 0;
 
   function getTodaysList(list) {
     setLists(
       list.filter((li) => {
-        console.log(li.date.slice(0, 10) === date);
+        console.log(li.date.slice(0, 10) === valueDate);
         return li.date.slice(0, 10) === valueDate;
       })
     );
@@ -65,9 +68,9 @@ function Recents() {
       >
         <div>
           {lists.length == 0 ? (
-            <h1>No task schduled on {date}</h1>
+            <h1>No task schduled on {valueDate}</h1>
           ) : (
-            <h1>{date}'s tasks :</h1>
+            <h1>{valueDate}'s tasks :</h1>
           )}
         </div>
         <br />
