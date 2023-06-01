@@ -1,0 +1,84 @@
+.login_container {
+  border-radius: 1rem;
+  background-color: rgb(184, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 3rem;
+  box-shadow: 0px 20px 15px -15px #111;
+  z-index: 3;
+}
+
+.profile_img {
+  position: relative;
+  /* left: 10rem; */
+  top: 2rem;
+}
+
+.username {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.username input {
+  height: 1.5rem;
+  background-color: rgb(84, 139, 250);
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: bold;
+}
+
+.username img {
+  height: 4rem;
+  width: 4rem;
+}
+.password {
+  display: flex;
+  align-items: center;
+  padding-left: 1.4rem;
+}
+
+.password input {
+  height: 1.5rem;
+  background-color: rgb(84, 139, 250);
+  border: none;
+  border-radius: 0.3rem;
+  font-weight: bold;
+}
+
+.password img {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 1.1rem;
+}
+.others {
+  display: flex;
+  justify-content: space-around;
+  padding-right: 4rem;
+  font-size: smaller;
+  padding-top: 2rem;
+}
+
+.btn {
+  height: 4rem;
+  width: 12rem;
+  background-color: rgb(184, 255, 255);
+  z-index: 2;
+  /* box-shadow: inset 0 0 20px black; */
+  /* margin-top: 1rem */
+  position: relative;
+  top: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-left: 5.5rem; */
+  border-radius: 0 0 1rem 1rem;
+  font-weight: bold;
+  font-size: large;
+  padding-top: 0.5rem;
+}
+
+.toggle span:hover {
+  cursor: pointer;
+}
