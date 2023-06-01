@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import { SendOutlined } from "@mui/icons-material";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Recents() {
   const [lists, setLists] = useState([]);
