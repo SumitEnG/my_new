@@ -96,7 +96,7 @@ function Recents() {
 
         <TableContainer
           component={Paper}
-          sx={{ maxHeight: "600px", p: "10rem" }}
+          sx={{ maxHeight: "600px", margin: "5rem" }}
         >
           <Table aria-label="simple table" stickyHeader>
             <TableHead>
