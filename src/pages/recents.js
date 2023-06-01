@@ -32,6 +32,7 @@ function Recents() {
         return li.date.slice(0, 10) == valueDate;
       })
     );
+
     if (lists.length > 0) {
       setShowTable(true);
     }
@@ -94,25 +95,21 @@ function Recents() {
         >
           <Table aria-label="simple table" stickyHeader>
             <TableHead>
-              {!showTable ? (
-                <TableRow
-                  sx={{
-                    "& th": {
-                      color: "white",
-                      backgroundColor: "black",
-                      fontWeight: "bold",
-                      fontSize: "16px",
-                    },
-                  }}
-                >
-                  <TableCell></TableCell>
-                  <TableCell>Sl. No.</TableCell>
-                  <TableCell>Tasks</TableCell>
-                  <TableCell>Time of completion</TableCell>
-                </TableRow>
-              ) : (
-                <></>
-              )}
+              <TableRow
+                sx={{
+                  "& th": {
+                    color: "white",
+                    backgroundColor: "black",
+                    fontWeight: "bold",
+                    fontSize: "16px",
+                  },
+                }}
+              >
+                <TableCell></TableCell>
+                <TableCell>Sl. No.</TableCell>
+                <TableCell>Tasks</TableCell>
+                <TableCell>Time of completion</TableCell>
+              </TableRow>
             </TableHead>
             <TableBody>
               {lists.map((row) => (
