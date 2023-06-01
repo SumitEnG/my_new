@@ -57,18 +57,13 @@ function TodaysTasks() {
 
   //functionn to filered lists of today
   function getTodaysList(list) {
-    const date = new Date();
-    let day = date.getDate();
-    let month = date.getMonth() + 1;
-    let year = date.getFullYear();
-
-    let currentDate = `${year}-${month}-${day}`;
-    console.log(currentDate, list);
+    const date = new Date().toJSON().slice(0, 10);
+    console.log(date, list);
 
     setLists(
       list.filter((li) => {
-        console.log(li.date.split("T") == currentDate);
-        return li.date.split("T") == currentDate;
+        console.log(li.date.split("T") == date);
+        return li.date.split("T") == date;
       })
     );
   }
