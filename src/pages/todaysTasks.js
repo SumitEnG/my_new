@@ -55,12 +55,28 @@ function TodaysTasks() {
     console.log(openModal);
   };
 
+  //functionn to filered lists of today
+  function getTodaysList(list) {
+    const date = new Date();
+    let day = date.getDate();
+    let month = date.getMonth() + 1;
+    let year = date.getFullYear();
+
+    let currentDate = `${year}-${month}-${day}`;
+
+    setLists(
+      list.filter((li) => {
+        return li.split("T") == currentDate;
+      })
+    );
+  }
+
   //function to fetch data
   const getLists = () => {
     axios
       .get("https://my-app-backend3.onrender.com/api/list")
       .then((res) => {
-        setLists(res.data);
+        getTodaysList(res.data);
         console.log(lists);
       })
       .catch((err) => console.log(err));
