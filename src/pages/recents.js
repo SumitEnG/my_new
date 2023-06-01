@@ -94,7 +94,10 @@ function Recents() {
           </Button>
         </div>
 
-        <TableContainer component={Paper} sx={{ maxHeight: "600px" }}>
+        <TableContainer
+          component={Paper}
+          sx={{ maxHeight: "600px", p: "10rem" }}
+        >
           <Table aria-label="simple table" stickyHeader>
             <TableHead>
               {!showTable ? (
