@@ -20,6 +20,7 @@ import { useNavigate } from "react-router-dom";
 function Recents() {
   const [lists, setLists] = useState([]);
   const [valueDate, setValueDate] = useState("");
+  const [showTable, setShowTable] = useState(false);
   const navigate = useNavigate();
   const count = 0;
 
@@ -30,6 +31,9 @@ function Recents() {
         return li.date.slice(0, 10) === valueDate;
       })
     );
+    if (lists.length > 0) {
+      setShowTable(true);
+    }
   }
 
   const getLists = () => {
@@ -68,7 +72,7 @@ function Recents() {
         }}
       >
         <div>
-          {lists.length == 0 ? (
+          {showTable ? (
             <h1>No task schduled on {valueDate}</h1>
           ) : (
             <h1>{valueDate}'s tasks :</h1>
@@ -93,7 +97,7 @@ function Recents() {
         <TableContainer component={Paper} sx={{ maxHeight: "600px" }}>
           <Table aria-label="simple table" stickyHeader>
             <TableHead>
-              {lists.length == 0 ? (
+              {!showTable ? (
                 <TableRow
                   sx={{
                     "& th": {
