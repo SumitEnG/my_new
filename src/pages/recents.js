@@ -22,7 +22,7 @@ function Recents() {
   const [valueDate, setValueDate] = useState("");
   const [showTable, setShowTable] = useState(false);
   const navigate = useNavigate();
-  const count = 0;
+  let count = 0;
 
   function getTodaysList(list) {
     setLists(
