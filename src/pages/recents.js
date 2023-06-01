@@ -27,8 +27,9 @@ function Recents() {
   function getTodaysList(list) {
     setLists(
       list.filter((li) => {
-        console.log(li.date.slice(0, 10) === valueDate);
-        return li.date.slice(0, 10) === valueDate;
+        console.log(li.date.slice(0, 10) == valueDate);
+        console.log(valueDate, li.date.slice(0, 10));
+        return li.date.slice(0, 10) == valueDate;
       })
     );
     if (lists.length > 0) {
@@ -71,9 +72,6 @@ function Recents() {
           // alignContent: "center"
         }}
       >
-        <div>
-          {showTable ? <h1>No task schduled on {valueDate}</h1> : <></>}
-        </div>
         <br />
 
         <div className="search">
