@@ -58,12 +58,12 @@ function TodaysTasks() {
   //functionn to filered lists of today
   function getTodaysList(list) {
     const date = new Date().toJSON().slice(0, 10);
-    console.log(date, list[0].date.split("T"));
+    console.log(date, list[0].date.slice(0, 10));
 
     setLists(
       list.filter((li) => {
-        console.log(li.date.split("T") === date);
-        return li.date.split("T") === date;
+        console.log(li.date.slice(0, 10) === date);
+        return li.date.slice(0, 10) === date;
       })
     );
   }
