@@ -40,6 +40,7 @@ function Login() {
         console.log(res.data);
         localStorage.setItem("token", res.data.token); //save token into localstorage
         localStorage.setItem("username", res.data.username);
+        localStorage.setItem("userId", res.data._id);
       })
       .catch((err) => {
         toast.dismiss();
