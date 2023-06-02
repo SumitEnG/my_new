@@ -40,7 +40,11 @@ function Recents() {
 
   const getLists = () => {
     axios
-      .get("https://my-app-backend3.onrender.com/api/list")
+      .get(
+        `https://my-app-backend3.onrender.com/api/list/${localStorage.getItem(
+          "userId"
+        )}`
+      )
       .then((res) => {
         getTodaysList(res.data);
         console.log(res.data);
