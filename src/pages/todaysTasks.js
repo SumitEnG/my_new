@@ -75,8 +75,8 @@ function TodaysTasks() {
         userId: localStorage.getItem("userId"),
       })
       .then((res) => {
-        getTodaysList(res.data);
         console.log(res.data);
+        getTodaysList(res.data);
       })
       .catch((err) => console.log(err));
   };
