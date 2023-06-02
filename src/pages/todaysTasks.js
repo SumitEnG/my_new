@@ -71,7 +71,9 @@ function TodaysTasks() {
   //function to fetch data
   const getLists = () => {
     axios
-      .get("https://my-app-backend3.onrender.com/api/list")
+      .get("https://my-app-backend3.onrender.com/api/list", {
+        userId: localStorage.getItem("userId"),
+      })
       .then((res) => {
         getTodaysList(res.data);
         console.log(res.data);
