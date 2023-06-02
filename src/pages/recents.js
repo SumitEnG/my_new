@@ -81,7 +81,7 @@ function Recents() {
 
         <div className="search">
           <TextField
-            label="enter the date (yyyy-dd-mm)"
+            label="enter the date (yyyy-mm-dd)"
             variant="filled"
             color="secondary"
             onChange={(e) => {
