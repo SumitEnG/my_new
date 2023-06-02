@@ -72,7 +72,7 @@ function TodaysTasks() {
   const getLists = () => {
     axios
       .get(
-        `https://my-app-backend3.onrender.com/api/list${localStorage.getItem(
+        `https://my-app-backend3.onrender.com/api/list/${localStorage.getItem(
           "userId"
         )}`
       )
